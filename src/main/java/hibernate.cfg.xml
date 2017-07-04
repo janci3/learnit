@@ -16,9 +16,10 @@
         <property name="cache_provider_class">org.hibernate.cache.NoCacheProvider</property>
         <property name="show_sql">true</property>
         <!-- create - drop and recreate tables every time, update - create new database and not drop older -->
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create</property>
         <property name="connection_pool_size">1</property>
         <property name="hibernate.enable_lazy_load_no_trans">true</property>
         
+        <mapping class="com.janci.learnit.entities.TestEntity"/>
     </session-factory>
 </hibernate-configuration>
