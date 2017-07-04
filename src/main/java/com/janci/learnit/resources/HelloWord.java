@@ -11,12 +11,13 @@ import javax.ws.rs.core.MediaType;
 import com.janci.learnit.entities.TestEntity;
 import com.janci.learnit.services.HelloService;
 
-@Path("/hello")
+@Path("/")
 @Consumes(MediaType.APPLICATION_JSON)
 public class HelloWord {
 	HelloService helloService = new HelloService();
 	
 	@GET
+	@Path("/hello")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String hello(){
 		return "hello word";
